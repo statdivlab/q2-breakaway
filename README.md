@@ -10,7 +10,7 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 `Breakaway` based in `R` and requires installation of `phyloseq` and `devtools` into your `conda` environment before installing `breakaway`. Please refer to the following instructions on how to set up `phyloseq` and `devtools` in your environment.
 
 ## Setting up your conda environment:
-***
+
 ### Install phyloseq <br>
 ```conda install -c bioconda -c conda-forge bioconductor-phyloseq```
 
@@ -20,7 +20,7 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 <br>
 ## QIIME user installation instructions:
-***
+
 ### Step 1: Activate QIIME Environment <br>
 ```source activate qiime2-2018.6```
 
