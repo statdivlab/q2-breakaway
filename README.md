@@ -13,3 +13,13 @@ jsonlite
 
 Install devtools
 ```conda install -c r r-devtools``` 
+
+QIIME user installation instructions: 
+Step 1: Activate QIIME Environment 
+```source activate qiime2-2018.6``` 
+
+Step 2: Install breakaway's plug-in 
+```pip install git+https://github.com/statdivlab/q2-breakaway.git```
+
+Step 3: Check that breakaway is installed 
+```qiime breakaway --help``` 
