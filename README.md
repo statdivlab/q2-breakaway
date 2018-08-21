@@ -11,21 +11,28 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 ## Setting up your conda environment:
 
-### Install phyloseq
-```conda install -c bioconda -c conda-forge bioconductor-phyloseq```
+### Activate your QIIME Environment
+- Here we activate our example version of QIIME, `qiime2-2018.6`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments.
 
-
-### Install devtools <br>
-```conda install -c r r-devtools```
-
-
-## QIIME user installation instructions:
-
-### Step 1: Activate QIIME Environment <br>
 ```source activate qiime2-2018.6```
 
-### Step 2: Install breakaway's plug-in <br>
+### Install `phyloseq`
+(Expected installation time ~2 minutes)
+
+```conda install -c bioconda -c conda-forge bioconductor-phyloseq```
+
+- Note: When installing select `y` to proceed with installation when prompted.
+
+
+### Install `devtools` <br>
+(Expected installation time ~2 minutes)
+
+```conda install -c r r-devtools```
+- Note: When installing select `y` to proceed with installation when prompted.
+
+
+### Install `breakaway` <br>
 ```pip install git+https://github.com/statdivlab/q2-breakaway.git```
 
-### Step 3: Check that breakaway is installed <br>
+### Check that `breakaway` is installed <br>
 ```qiime breakaway --help```
