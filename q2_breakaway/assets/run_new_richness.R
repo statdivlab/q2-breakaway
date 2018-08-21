@@ -121,7 +121,7 @@ class(ps)
 
 cat("Embarking on the journey that is installing breakaway...\n\n")
 
-devtools::install_github("adw96/breakaway")
+devtools::install_github("paulinetrinh/breakaway")
 library(breakaway)
 # suppressWarnings(library(breakaway))
 cat("breakaway R package version:", as.character(packageVersion("breakaway")), "\n")
