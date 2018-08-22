@@ -62,55 +62,38 @@ print(head(the_otu_table))
 
 cat(installed.packages()[,"Package"])
 
-#Tidyverse install
+#Check if Tidyverse is install
 if ("tibble" %in% installed.packages()[,"Package"]) {
     cat("You have tibble installed!\n\n")
 } else {
-    devtools::install_github("tidyverse/tibble")
+    cat("Error: Tibble needs to be installed!\n\n"
 }
-cat("Whoo! You have tibble now!\n\n")
 library(tibble)
 
 #Magrittr install
 if ("magrittr" %in% installed.packages()[,"Package"]) {
     cat("You have magrittr installed!\n\n")
 } else {
-    cat("Embarking on the journey that is installing magrittr...\n\n")
-    try1 <- try(install.packages("magrittr"), silent = T)
-    if (class(try1) == "try-error") {
-        #cat("Didn't work the first time.")
-        #try1 <- try(install.packages("tidyverse", repos='http://cran.us.r-project.org'), silent = T)
-        errQuit("Could not install tidyverse.")
+    cat("Error: Magrittr needs to be installed!\n\n")
     }
 }
-cat("Whoo! You have magrittr now!\n\n")
 library(magrittr)
 
-#Devtools install (Will be installed in the README into the conda environment)
+#Devtools install check
 if ("devtools" %in% installed.packages()[,"Package"]) {
-    cat("Thank god! devtools is already available\n\n")
+    cat("Thank goodness! devtools is already available\n\n")
 } else {
-    cat("Embarking on the journey that is installing devtools...\n\n")
-    try1 <- try(install.packages("devtools"), silent = T)
-    if (class(try1) == "try-error") {
-        #cat("Didn't work the first time.")
-        #try1 <- try(install.packages("devtools", repos='http://cran.us.r-project.org'), silent = T)
-        errQuit("Could not install devtools.")
+    cat("Error: Devtools needs to be installed!\n\n")
     }
 }
-cat("Hooray! You have devtools!\n\n")
-
-#Phyloseq doesn't need fto be installed here. Will be installed in conda environment in the README
+#Phyloseq install check
 if ("phyloseq" %in% installed.packages()[,"Package"]) {
-    cat("Thank god! phyloseq is already available\n\n")
+    cat("Great! phyloseq is already available\n\n")
 } else {
-    source('http://bioconductor.org/biocLite.R')
-    biocLite('phyloseq', dependencies=TRUE)
+    cat("Error: Phyloseq needs to be installed!\n\n")
 }
 
 library(phyloseq)
-
-cat("Hooray! You have phyloseq!\n\n")
 
 
 cat("Attempting to make phyloseq object...\n\n")
@@ -119,9 +102,14 @@ ps <- phyloseq(otu_table(the_otu_table, taxa_are_rows = TRUE))
 
 class(ps)
 
-cat("Embarking on the journey that is installing breakaway...\n\n")
 
-devtools::install_github("paulinetrinh/breakaway")
+#Breakaway check install
+if ("breakaway" %in% installed.packages()[,"Package"]) {
+    cat("Breakaway is installed! We're ready to go now. \n\n")
+} else {
+    cat("Error: Breakaway needs to be installed!\n\n")
+}
+}
 library(breakaway)
 # suppressWarnings(library(breakaway))
 cat("breakaway R package version:", as.character(packageVersion("breakaway")), "\n")
