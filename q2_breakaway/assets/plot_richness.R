@@ -49,41 +49,27 @@ if(!file.exists(alpha.file)) {
 
 cat(installed.packages()[,"Package"])
 
-#Tidyverse install
+#Check if Tidyverse is install
 if ("tibble" %in% installed.packages()[,"Package"]) {
-  cat("You have tibble installed!\n\n")
+    cat("You have tibble installed!\n\n")
 } else {
-  devtools::install_github("tidyverse/tibble")
+    cat("Error: Tibble needs to be installed!\n\n")
 }
-cat("Whoo! You have tibble now!\n\n")
 library(tibble)
 
 #Magrittr install
 if ("magrittr" %in% installed.packages()[,"Package"]) {
-  cat("You have magrittr installed!\n\n")
+    cat("You have magrittr installed!\n\n")
 } else {
-  cat("Embarking on the journey that is installing magrittr...\n\n")
-  try1 <- try(install.packages("magrittr"), silent = T)
-  if (class(try1) == "try-error") {
-    #cat("Didn't work the first time.")
-    #try1 <- try(install.packages("tidyverse", repos='http://cran.us.r-project.org'), silent = T)
-    errQuit("Could not install magrittr.")
-  }
+    cat("Error: Magrittr needs to be installed!\n\n")
 }
-cat("Whoo! You have magrittr now!\n\n")
 library(magrittr)
 
 #Install ggplot2
 if ("ggplot2" %in% installed.packages()[,"Package"]) {
     cat("You have ggplot2 installed!\n\n")
 } else {
-    cat("Time to begin installing ggplot2...\n\n")
-    try1 <- try(install.packages("ggplot2"), silent = T)
-    if (class(try1) == "try-error") {
-        #cat("Didn't work the first time.")
-        #try1 <- try(install.packages("tidyverse", repos='http://cran.us.r-project.org'), silent = T)
-        errQuit("Could not install ggplot2.")
-    }
+    cat("Error: Magrittr needs to be installed!\n\n")
 }
 library(ggplot2)
 

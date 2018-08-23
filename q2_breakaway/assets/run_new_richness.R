@@ -66,7 +66,7 @@ cat(installed.packages()[,"Package"])
 if ("tibble" %in% installed.packages()[,"Package"]) {
     cat("You have tibble installed!\n\n")
 } else {
-    cat("Error: Tibble needs to be installed!\n\n"
+    cat("Error: Tibble needs to be installed!\n\n")
 }
 library(tibble)
 
@@ -76,7 +76,6 @@ if ("magrittr" %in% installed.packages()[,"Package"]) {
 } else {
     cat("Error: Magrittr needs to be installed!\n\n")
     }
-}
 library(magrittr)
 
 #Devtools install check
@@ -85,7 +84,7 @@ if ("devtools" %in% installed.packages()[,"Package"]) {
 } else {
     cat("Error: Devtools needs to be installed!\n\n")
     }
-}
+
 #Phyloseq install check
 if ("phyloseq" %in% installed.packages()[,"Package"]) {
     cat("Great! phyloseq is already available\n\n")
