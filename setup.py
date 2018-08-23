@@ -19,7 +19,7 @@ setup(
     license="BSD-3-Clause",
     packages=find_packages(),
     author="Amy Willis",
-    description="Amy's first breakaway in Q2. ",
+    description="breakaway is the premier package for statistical analysis of microbial diversity. breakaway implements the latest and greatest estimates of richness, as well as the most commonly used estimates. Understanding the drivers of microbial diversity is an important frontier of microbial ecology, and investigating the diversity of samples from microbial ecosystems is a common step in any microbiome analysis.",
     scripts=['q2_breakaway/assets/run_new_richness.R',
              'q2_breakaway/assets/plot_richness.R'],
     package_data={
