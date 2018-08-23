@@ -30,7 +30,7 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 ### Install `q2-breakaway`
 
-```pip install git+https://github.com/adw96/q2-breakaway.git```
+```pip install git+https://github.com/statdivlab/q2-breakaway.git```
 
 
 ### Check that `breakaway` is installed <br>
