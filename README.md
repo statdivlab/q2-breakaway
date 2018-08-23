@@ -12,9 +12,9 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 ### Activate your QIIME Environment
 
-- Here we activate our example version of QIIME, `qiime2-2018.6`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments.
+- Here we activate our example version of QIIME, `qiime2-2018.8`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments.
 
-```source activate qiime2-2018.6```
+```source activate qiime2-2018.8```
 
 ### Install `breakaway` dependencies
 
@@ -26,11 +26,11 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 ### Install `breakaway` <br>
 
-```TAR=/bin/tar R -e 'library("devtools"); options(unzip = "internal"); devtools::install_url("https://github.com/paulinetrinh/breakaway/archive/master.zip")'```
+```TAR=/bin/tar R -e 'library("devtools"); options(unzip = "internal"); devtools::install_url("https://github.com/adw96/breakaway/archive/master.zip")'```
 
 ### Install `q2-breakaway`
 
-```pip install git+https://github.com/paulinetrinh/q2-breakaway.git```
+```pip install git+https://github.com/adw96/q2-breakaway.git```
 
 
 ### Check that `breakaway` is installed <br>
