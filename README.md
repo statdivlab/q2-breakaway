@@ -20,7 +20,7 @@ source activate qiime2-2018.6
 
 ### Install `breakaway` dependencies
 
-(Expected installation time ~5 minutes)
+(Expected installation time ~3-5 minutes)
 
 ```
 conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibble r-magrittr r-dplyr r-withr r-testthat r-praise unzip
@@ -49,7 +49,7 @@ qiime breakaway --help
 ```
 
 
-# QIIME2 Tutorial
+# QIIME2 Tutorial: Using q2-breakaway 
 This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
@@ -71,3 +71,34 @@ estimates. Please cite the following if you use them:
 - For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts.
 
 <a href="https://github.com/paulinetrinh/data/blob/master/table.qza" target="_blank"> table.qza </a>
+
+```
+qiime breakaway alpha \
+--i-table table.qza \
+--p-metric richness \
+--o-alpha-diversity richness-better.qza
+```
+
+You can export the results out of QIIME2 to see the richness estimates, confidence intervals, and model used by ```breakaway```.
+```
+qiime tools export \
+richness-better.qza \
+--output-dir richness
+```
+
+<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity.tsv" target="_blank"> alpha-diversity.tsv </a>
+
+We see that a Poisson model was used to generate our confidence intervals! Let's visualize our estimates and their error bars.
+
+```
+qiime breakaway plot \
+--i-alpha-diversity richness-better.qza \
+--o-visualization richness-better-plot
+```
+
+To view...
+```
+qiime tools view richness-better-plot.qzv
+```
+
+The error bars are very small in this dataset, but they're there!
