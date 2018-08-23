@@ -49,7 +49,7 @@ qiime breakaway --help
 ```
 
 
-# QIIME2 Tutorial: Using q2-breakaway 
+# QIIME2 Tutorial: Using q2-breakaway
 This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
@@ -70,7 +70,7 @@ estimates. Please cite the following if you use them:
 ### How to use q2-breakaway
 - For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts.
 
-<a href="https://github.com/paulinetrinh/data/blob/master/table.qza" target="_blank"> table.qza </a>
+<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/table.qza" download>table.qza</a>
 
 ```
 qiime breakaway alpha \
@@ -86,7 +86,7 @@ richness-better.qza \
 --output-dir richness
 ```
 
-<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity.tsv" target="_blank"> alpha-diversity.tsv </a>
+<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity.tsv" download>alpha-diversity.tsv</a>
 
 We see that a Poisson model was used to generate our confidence intervals! Let's visualize our estimates and their error bars.
 
