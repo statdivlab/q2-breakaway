@@ -108,7 +108,7 @@ if ("breakaway" %in% installed.packages()[,"Package"]) {
 } else {
     cat("Error: Breakaway needs to be installed!\n\n")
 }
-}
+
 library(breakaway)
 # suppressWarnings(library(breakaway))
 cat("breakaway R package version:", as.character(packageVersion("breakaway")), "\n")
