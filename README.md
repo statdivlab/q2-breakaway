@@ -20,7 +20,7 @@ source activate qiime2-2018.6
 
 ### Install `breakaway` dependencies
 
-(Expected installation time ~3-5 minutes)
+(Expected installation time ~5 minutes)
 
 ```
 conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibble r-magrittr r-dplyr r-withr r-testthat r-praise unzip
