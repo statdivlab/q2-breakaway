@@ -14,25 +14,35 @@ To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
 
 - Here we activate our example version of QIIME, `qiime2-2018.8`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments.
 
-```source activate qiime2-2018.8```
+```
+source activate qiime2-2018.8
+```
 
 ### Install `breakaway` dependencies
 
 (Expected installation time ~3-5 minutes)
 
-```conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibble r-magrittr r-dplyr r-withr r-testthat r-praise unzip```
+```
+conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibble r-magrittr r-dplyr r-withr r-testthat r-praise unzip
+```
 
 - Note: When installing select `y` to proceed with installation when prompted.
 
 ### Install `breakaway` <br>
 
-```TAR=/bin/tar R -e 'library("devtools"); options(unzip = "internal"); devtools::install_url("https://github.com/adw96/breakaway/archive/master.zip")'```
+```
+TAR=/bin/tar R -e 'library("devtools"); options(unzip = "internal"); devtools::install_url("https://github.com/adw96/breakaway/archive/master.zip")'
+```
 
 ### Install `q2-breakaway`
 
-```pip install git+https://github.com/statdivlab/q2-breakaway.git```
+```
+pip install git+https://github.com/statdivlab/q2-breakaway.git
+```
 
 
 ### Check that `breakaway` is installed <br>
 
-```qiime breakaway --help```
+```
+qiime breakaway --help
+```
