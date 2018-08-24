@@ -21,12 +21,11 @@ plugin = qiime2.plugin.Plugin(
     version=q2_breakaway.__version__,
     website='http://github.com/adw96/breakaway/',
     package='q2_breakaway',
-    description=('baway'),
-    short_description='Estimates richness via frequency ratios',
+    description=('breakaway is the premier package for statistical analysis of microbial diversity. breakaway implements the latest and greatest estimates of richness, as well as the most commonly used estimates. The breakaway philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars.'),
+    short_description='breakaway estimates microbial diversity, along with error bars',
     citations=qiime2.plugin.Citations.load('citations.bib', package='q2_breakaway')
 )
 
-_METRIC_CHOICES = {'richness', 'chao_bunge'}
 
 plugin.methods.register_function(
     function=q2_breakaway.alpha,
