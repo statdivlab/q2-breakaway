@@ -5,9 +5,7 @@
 
 This repository contains the `breakaway` QIIME 2 plugin. `Breakaway` is in active development and is available in `R` (https://github.com/adw96/breakaway) or as a QIIME2 plugin (q2-breakaway).
 
-To learn how to use `breakaway` in QIIME2, see https://qiime2.org.
-
-`Breakaway` is based in `R` and requires installation of dependencies `phyloseq`, `devtools`, `ggplot2`,`magrittr`, `tibble`, `dplyr`,`withr`,`testthat`, and `praise` into your `conda` environment before installing `breakaway`. Please refer to the following instructions on how to install `breakaway` and its dependencies.
+`breakaway` is based in `R` and requires installation of dependencies `phyloseq`, `devtools`, `ggplot2`,`magrittr`, `tibble`, `dplyr`,`withr`,`testthat`, and `praise` into your `conda` environment before installing `breakaway`. Please refer to the following instructions on how to install `breakaway` and its dependencies.
 
 
 ### Activate your QIIME Environment
@@ -49,7 +47,7 @@ This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
 diversity. `breakaway` implements the latest and greatest estimates of
-richness, as well as the most commonly used estimates. Understanding the
+richness, as well as the most commonly used estimates. breakaway is the premier package for statistical analysis of microbial diversity. breakaway implements the latest and greatest estimates of richness, as well as the most commonly used estimates. The breakaway philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars. Understanding the
 drivers of microbial diversity is an important frontier of microbial
 ecology, and investigating the diversity of samples from microbial
 ecosystems is a common step in any microbiome analysis.
@@ -59,8 +57,7 @@ ecosystems is a common step in any microbiome analysis.
 The `R` package `breakaway` implements a number of different richness
 estimates. Please cite the following if you use them:
 
-  - `breakaway()`: Willis, A. & Bunge, J. (2015).
-    Estimating diversity via frequency ratios. Biometrics.
+  - `breakaway()`: Willis and Bunge (2015). Estimating diversity via frequency ratios. Biometrics.
 
 ### How to use q2-breakaway
 - For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts. We recommend using a FeatureTable that has been generated from `deblur`/`vsearch` or `dada2` in `R` with pool = TRUE to make sure that singletons have not been completely filtered out.
