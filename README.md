@@ -94,4 +94,11 @@ qiime tools view richness-better-plot.qzv
 
 <center><img src = "https://github.com/paulinetrinh/q2-breakaway/blob/master/data/breakaway_plot.png?raw=true"></center>
 
-And now there are error bars around our estimates!
+And now there are error bars around our estimates! Note that some error bars are smaller than others. This is because those samples had few rare taxa, and so low uncertainty in estimating the number of missing taxa.
+
+## Future Functionality (things to look forward to!)
+- `kemp()`: Willis, A. & Bunge, J. (2015). Estimating diversity via frequency ratios. Biometrics.
+- `betta()`: Willis, A., Bunge, J., & Whitman, T. (2017). Improved detection of changes in species richness in high diversity microbial communities. JRSS-C.
+- `breakaway_nof1()`: Willis, A. (2016+). Species richness estimation with high diversity but spurious singletons. arXiv.
+- `objective_bayes_*()`: Barger, K. & Bunge, J. (2010). Objective
+    Bayesian estimation for the number of species. Bayesian Analysis.
