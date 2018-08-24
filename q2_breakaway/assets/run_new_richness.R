@@ -129,7 +129,7 @@ if (my.metric == "richness"){
     df <- summary(breakaway::breakaway(ps))
 }
 
-df <- df[c("sample_names","estimate","error","lower","name","model")]
+df <- df[c("sample_names","estimate","error","lower","upper", "name","model")]
 
 ### PRINT DIVERSITY ###
 cat("2) Write diversity estimates\n")
