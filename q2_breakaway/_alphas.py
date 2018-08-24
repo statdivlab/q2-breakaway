@@ -36,8 +36,7 @@ def run_commands(cmds, verbose=True):
             print(" ".join(cmd), end='\n\n')
         subprocess.run(cmd, check=True)
 
-def alpha(table: biom.Table,
-                metric: str) -> AlphaDiversityFormat:
+def alpha(table: biom.Table) -> AlphaDiversityFormat:
     if table.is_empty():
         raise ValueError("The provided table object is empty")
 
@@ -51,7 +50,7 @@ def alpha(table: biom.Table,
             fh.write(table.to_tsv())
 
 
-        cmd = ['run_new_richness.R', input_name, str(metric), str(output)]
+        cmd = ['run_new_richness.R', input_name, str(output)]
         run_commands([cmd])
     return output
 
