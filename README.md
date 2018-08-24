@@ -47,10 +47,7 @@ This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
 diversity. `breakaway` implements the latest and greatest estimates of
-richness, as well as the most commonly used estimates. breakaway is the premier package for statistical analysis of microbial diversity. breakaway implements the latest and greatest estimates of richness, as well as the most commonly used estimates. The breakaway philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars. Understanding the
-drivers of microbial diversity is an important frontier of microbial
-ecology, and investigating the diversity of samples from microbial
-ecosystems is a common step in any microbiome analysis.
+richness, as well as the most commonly used estimates. The `breakaway` philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars. 
 
 ### Citing breakaway
 
