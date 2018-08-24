@@ -80,10 +80,16 @@ library(magrittr)
 
 #Devtools install check
 if ("devtools" %in% installed.packages()[,"Package"]) {
-    cat("Thank goodness! devtools is already available\n\n")
+    cat("Thank god! devtools is already available\n\n")
 } else {
-    cat("Error: Devtools needs to be installed!\n\n")
+    cat("Embarking on the journey that is installing devtools...\n\n")
+    try1 <- try(install.packages("devtools"), silent = T)
+    if (class(try1) == "try-error") {
+        #cat("Didn't work the first time.")
+        #try1 <- try(install.packages("devtools", repos='http://cran.us.r-project.org'), silent = T)
+        errQuit("Could not install devtools.")
     }
+}
 
 #Phyloseq install check
 if ("phyloseq" %in% installed.packages()[,"Package"]) {
@@ -106,7 +112,7 @@ class(ps)
 if ("breakaway" %in% installed.packages()[,"Package"]) {
     cat("Breakaway is installed! We're ready to go now. \n\n")
 } else {
-    cat("Error: Breakaway needs to be installed!\n\n")
+    devtools::install_github("adw96/breakaway")
 }
 
 library(breakaway)
