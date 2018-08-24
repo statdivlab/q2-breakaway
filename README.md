@@ -65,7 +65,7 @@ estimates. Please cite the following if you use them:
 ### How to use q2-breakaway
 - For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts. We recommend using a FeatureTable that has been generated from `deblur`/`vsearch` or `dada2` in `R` with pool = TRUE to make sure that singletons have not been completely filtered out. 
 
-<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/table-deblur.qza" download>table-deblur.qza</a>
+<a href="https://github.com/statdivlab/q2-breakaway/blob/master/data/table-deblur.qza?raw=true" download>table-deblur.qza</a>
 
 ```
 qiime breakaway alpha \
@@ -81,7 +81,7 @@ richness-better.qza \
 --output-dir richness
 ```
 
-<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity-deblur.tsv" download>alpha-diversity.tsv</a>
+<a href="https://github.com/statdivlab/q2-breakaway/raw/master/data/alpha-diversity-deblur.tsv" download>alpha-diversity.tsv</a>
 
 We see that Kemp, Poisson, and Negative Binomial models were used to generate our confidence intervals! Let's visualize our estimates and their error bars.
 
