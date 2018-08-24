@@ -70,7 +70,6 @@ estimates. Please cite the following if you use them:
 ```
 qiime breakaway alpha \
 --i-table table-deblur.qza \
---p-metric richness \
 --o-alpha-diversity richness-better.qza
 ```
 
