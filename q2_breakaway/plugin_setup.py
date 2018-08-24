@@ -22,7 +22,7 @@ plugin = qiime2.plugin.Plugin(
     website='http://github.com/adw96/breakaway/',
     package='q2_breakaway',
     description=('baway'),
-    short_description='ba.',
+    short_description='Estimates richness via frequency ratios',
     citations=qiime2.plugin.Citations.load('citations.bib', package='q2_breakaway')
 )
 
@@ -32,13 +32,10 @@ plugin.methods.register_function(
     function=q2_breakaway.alpha,
     inputs={'table': FeatureTable[Frequency]},
     outputs=[('alpha_diversity', SampleData[AlphaDiversity % Properties(["StandardError", "LowerConfidence", "UpperConfidence", "SampleNames", "MethodName", "ModelType"])])],
-    parameters={'metric': Str % Choices(_METRIC_CHOICES)},
+    parameters={},
     input_descriptions={
         'table': ('The feature table containing the samples for which alpha '
                   'diversity should be computed.')
-    },
-    parameter_descriptions={
-        'metric': 'An alpha diversity metric',
     },
     output_descriptions={
         'alpha_diversity': 'Vector containing per-sample alpha diversities.'

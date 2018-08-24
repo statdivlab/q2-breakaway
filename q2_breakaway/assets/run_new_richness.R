@@ -21,8 +21,8 @@ cat(R.version$version.string, "\n")
 args <- commandArgs(TRUE)
 
 otu.file <- args[[1]] # "/Users/amy/qiime2-workshop/test_otus.csv"
-my.metric <- args[[2]] #  "richness"
-out.file <- args[[3]] # "/Users/amy/qiime2-workshop/tmp.tsv"
+#my.metric <- args[[2]] #  "richness"
+out.file <- args[[2]] # "/Users/amy/qiime2-workshop/tmp.tsv"
 
 # otu.file <- "/Users/amy/qiime2-workshop/test_otus.csv"
 # my.metric <- "shannon"
@@ -82,14 +82,9 @@ library(magrittr)
 if ("devtools" %in% installed.packages()[,"Package"]) {
     cat("Thank god! devtools is already available\n\n")
 } else {
-    cat("Embarking on the journey that is installing devtools...\n\n")
-    try1 <- try(install.packages("devtools"), silent = T)
-    if (class(try1) == "try-error") {
-        #cat("Didn't work the first time.")
-        #try1 <- try(install.packages("devtools", repos='http://cran.us.r-project.org'), silent = T)
-        errQuit("Could not install devtools.")
+    cat("Error: Need to install devtools!! \n\n")
     }
-}
+
 
 #Phyloseq install check
 if ("phyloseq" %in% installed.packages()[,"Package"]) {
@@ -122,12 +117,7 @@ cat("breakaway R package version:", as.character(packageVersion("breakaway")), "
 
 ### ESTIMATE DIVERSITY ###
 cat("1) Estimate diversity\n")
-if (my.metric == "chao_bunge"){
-    df <- summary(breakaway::chao_bunge(ps))
-}
-if (my.metric == "richness"){
     df <- summary(breakaway::breakaway(ps))
-}
 
 df <- df[c("sample_names","estimate","error","lower","upper", "name","model")]
 
