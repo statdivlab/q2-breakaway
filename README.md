@@ -28,13 +28,8 @@ conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibb
 
 - Note: When installing select `y` to proceed with installation when prompted.
 
-### Install `breakaway` <br>
 
-```
-TAR=/bin/tar R -e 'library("devtools"); options(unzip = "internal"); devtools::install_url("https://github.com/adw96/breakaway/archive/master.zip")'
-```
-
-### Install `q2-breakaway`
+### Install  `breakaway`  and `q2-breakaway`
 
 ```
 pip install git+https://github.com/statdivlab/q2-breakaway.git
@@ -68,13 +63,13 @@ estimates. Please cite the following if you use them:
     Estimating diversity via frequency ratios. Biometrics.
 
 ### How to use q2-breakaway
-- For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts.
+- For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts. We recommend using a FeatureTable that has been generated from `deblur`/`vsearch` or `dada2` in `R` with pool = TRUE to make sure that singletons have not been completely filtered out. 
 
-<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/table.qza" download>table.qza</a>
+<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/table-deblur.qza" download>table-deblur.qza</a>
 
 ```
 qiime breakaway alpha \
---i-table table.qza \
+--i-table table-deblur.qza \
 --p-metric richness \
 --o-alpha-diversity richness-better.qza
 ```
@@ -86,9 +81,9 @@ richness-better.qza \
 --output-dir richness
 ```
 
-<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity.tsv" download>alpha-diversity.tsv</a>
+<a href="https://raw.githubusercontent.com/paulinetrinh/data/master/alpha-diversity-deblur.tsv" download>alpha-diversity.tsv</a>
 
-We see that a Poisson model was used to generate our confidence intervals! Let's visualize our estimates and their error bars.
+We see that Kemp, Poisson, and Negative Binomial models were used to generate our confidence intervals! Let's visualize our estimates and their error bars.
 
 ```
 qiime breakaway plot \
@@ -101,4 +96,4 @@ To view...
 qiime tools view richness-better-plot.qzv
 ```
 
-The error bars are very small in this dataset, but they're there!
+And now there are error bars around our estimates! 
