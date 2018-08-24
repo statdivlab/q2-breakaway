@@ -63,7 +63,7 @@ estimates. Please cite the following if you use them:
     Estimating diversity via frequency ratios. Biometrics.
 
 ### How to use q2-breakaway
-- For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts. We recommend using a FeatureTable that has been generated from `deblur`/`vsearch` or `dada2` in `R` with pool = TRUE to make sure that singletons have not been completely filtered out. 
+- For this tutorial we will be using data from the "Moving Pictures" data. q2-breakaway requires input of a FeatureTable of frequency counts. We recommend using a FeatureTable that has been generated from `deblur`/`vsearch` or `dada2` in `R` with pool = TRUE to make sure that singletons have not been completely filtered out.
 
 <a href="https://github.com/statdivlab/q2-breakaway/blob/master/data/table-deblur.qza?raw=true" download>table-deblur.qza</a>
 
@@ -95,4 +95,6 @@ To view...
 qiime tools view richness-better-plot.qzv
 ```
 
-And now there are error bars around our estimates! 
+<center><img src = "https://github.com/paulinetrinh/q2-breakaway/blob/master/data/breakaway_plot.png?raw=true"></center>
+
+And now there are error bars around our estimates!
