@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/qiime2/q2-breakaway.svg?branch=master)](https://travis-ci.org/qiime2/q2-breakaway)
 [![Coverage Status](https://coveralls.io/repos/github/qiime2/q2-breakaway/badge.svg?branch=master)](https://coveralls.io/github/qiime2/q2-breakaway?branch=master)
 
-This repository contains the `breakaway` QIIME 2 plugin. `Breakaway` is in active development and is available in `R` (https://github.com/adw96/breakaway) or as a QIIME2 plugin (q2-breakaway).
+This repository contains the `breakaway` QIIME 2 plugin. `breakaway` is in active development and is available in `R` (https://github.com/adw96/breakaway) or as a QIIME2 plugin (q2-breakaway).
 
 `breakaway` is based in `R` and requires installation of dependencies `phyloseq`, `devtools`, `ggplot2`,`magrittr`, `tibble`, `dplyr`,`withr`,`testthat`, and `praise` into your `conda` environment before installing `breakaway`. Please refer to the following instructions on how to install `breakaway` and its dependencies.
 
@@ -47,7 +47,7 @@ This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
 diversity. `breakaway` implements the latest and greatest estimates of
-richness, as well as the most commonly used estimates. The `breakaway` philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars. 
+richness, as well as the most commonly used estimates. The `breakaway` philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars.
 
 ### Citing breakaway
 
