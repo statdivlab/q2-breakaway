@@ -10,10 +10,10 @@ This repository contains the `breakaway` QIIME 2 plugin. `breakaway` is in activ
 
 ### Activate your QIIME Environment
 
-- Here we activate our example version of QIIME, `qiime2-2018.6`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments.
+- Here we activate our example version of QIIME, `qiime2-2018.8`. If you're not sure what your current version of QIIME is you can run `conda env list` in the command line to see a list of installed QIIME environments. Note: q2-breakaway is compatible only with version `qiime2-2018.8` and on.
 
 ```
-source activate qiime2-2018.6
+source activate qiime2-2018.8
 ```
 
 ### Install `breakaway` dependencies
@@ -43,13 +43,13 @@ qiime breakaway --help
 
 
 # QIIME2 Tutorial: Using q2-breakaway
-This is a Community Tutorial for q2-breakaway within the qiime2-2018.6 release.
+This is a Community Tutorial for q2-breakaway within the qiime2-2018.8 release.
 
 `breakaway` is the premier package for statistical analysis of microbial
 diversity. `breakaway` implements the latest and greatest estimates of
 richness, as well as the most commonly used estimates. The `breakaway` philosophy is to estimate diversity, to put error bars on diversity estimates, and to perform hypothesis tests for diversity that use those error bars.
 
-### Citing breakaway
+### Citing `breakaway`
 
 The `R` package `breakaway` implements a number of different richness
 estimates. Please cite the following if you use them:
