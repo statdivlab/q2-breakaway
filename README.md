@@ -27,10 +27,18 @@ conda install -c bioconda -c conda-forge bioconductor-phyloseq r-devtools r-tibb
 - Note: When installing select `y` to proceed with installation when prompted.
 
 
-### Install  `breakaway`  and `q2-breakaway`
+### Install  `breakaway`  and `q2-breakaway` for OSX Users 
 
 ```
 pip install git+https://github.com/statdivlab/q2-breakaway.git
+R -e 'library(devtools); devtools::install_github("adw96/breakaway")'
+qiime dev refresh-cache
+```
+
+### Install  `breakaway`  and `q2-breakaway` for LINUX Users 
+``` 
+pip install git+https://github.com/statdivlab/q2-breakaway.git
+R -e 'Sys.setenv(TAR = "/bin/tar"); library(devtools); devtools::install_github("adw96/breakaway")' 
 qiime dev refresh-cache
 ```
 
