@@ -41,7 +41,8 @@ if(!file.exists(alpha.file)) {
     alpha_estimates_table <- read.table(file = alpha.file,
                                         header = TRUE,
                                         sep = '\t',
-                                        row.names = NULL)
+                                        row.names = NULL,
+                                        check.names = FALSE)
 }
 
 ### LOAD LIBRARIES ###
