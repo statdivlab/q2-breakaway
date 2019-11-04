@@ -48,7 +48,7 @@ if(!file.exists(otu.file)) {
                           row.names = NULL,
                           check.names = FALSE
   )[, -1]
-  colnames(the_otu_table) <- colnames(read.csv(otu.file, nrows=1, skip=1, sep = "\t"))[-1]
+  colnames(the_otu_table) <- colnames(read.csv(otu.file, nrows=1, skip=1, sep = "\t", check.names = FALSE))[-1]
   
   
   # the_otu_table <- t(the_otu_table)
